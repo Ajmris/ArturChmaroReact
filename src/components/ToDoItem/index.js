@@ -18,6 +18,9 @@ class ToDoItem extends Component{
     toggleDone=()=>{
       this.setState({done: !this.state.done})
     }
+    componentWillUnmount=()=>{
+      console.log(`todo ${this.props.text} unmounted...`)
+    }
     render(){
       const {text} =this.props
       return(
@@ -27,4 +30,4 @@ class ToDoItem extends Component{
       )
     }
   }
-  export default ToDoItem;
+export default ToDoItem;
